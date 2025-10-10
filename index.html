@@ -4,41 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
     <style type="text/tailwindcss">
       @theme {
         --color-primary: #463ADD;
         --color-secondary: #EEF1FF;
 
+        --color-background : #FCFDFF;
         --color-white: #FFFFFF;
 
         --color-lightgrey: #E0E1E6;
         --color-grey: #81828C;
 
+        --color-badgeLightgrey : #F9F9FB;
+        --color-badgeGrey : #CDCED6;
+
         --color-pink: #FF00FB;
+
+        --font-inter: "Inter", sans-serif;
       }
     </style>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
+    
+    <meta name="description" content="Reproduction d'une maquette utilisant tailwind">
     <title>Document</title>
 </head>
-<body class="w-screen h-screen">
+<body class="w-screen h-screen font-inter">
     <header></header>
-    <main class="flex w-full h-full">
+    <main class="flex flex-col md:flex-row w-full h-full">
 
-        <section class="w-xs h-full bg-secondary flex flex-col items-center">
+        <section class="w-full md:w-xs md:h-full bg-secondary flex flex-col items-center">
 
-            <p class="font-Inter font-black text-4xl bg-gradient-to-tr from-primary to-pink bg-clip-text text-transparent p-5">Tailwind</p> 
+            <p class="font-black text-4xl bg-gradient-to-tr from-primary to-pink bg-clip-text text-transparent p-5">Tailwind</p> 
 
         </section>
             
-        <section class="h-full flex-1 flex-col items-center">
+        <section class="w-full h-full flex-1 bg-background flex-col items-center">
 
             <!-- barre de recherche -->
-            <div class="flex w-full justify-center items-center border-b-1 border-lightgrey p-5">
+            <div class="flex w-full justify-center items-center bg-white border-b-1 border-lightgrey p-5">
                 <h1 class="flex-1 text-2xl font-semibold">My Catalogs</h1>
 
                 <div class="bg-primary rounded-md flex px-4 py-3 gap-3">
@@ -48,8 +56,8 @@
 
             </div>
 
-            <div class="w-full flex gap-2 px-4 py-5">
-                <div class="w-1/3 h-43 p-3 border-lightgrey border-1 rounded-lg flex flex-col gap-3">
+            <div class="w-full h-max flex flex-col md:flex-row gap-2 px-4 py-5">
+                <div class="md:w-1/3 flex-1 p-3 bg-white border-lightgrey border-1 rounded-lg flex flex-col gap-3 justify-between">
                     <div class="flex flex-col gap-3">
                         <p class="px-3 py-2 text-xs font-medium">Create Catalog</p>
                         <p class="px-3 py-2 text-xs font-normal text-grey">Create new catalog to add products and generate content.</p>
@@ -61,15 +69,15 @@
                     </div>
                 </div>
                 
-                <div class="w-1/3 h-43 p-3 border-lightgrey border-1 rounded-lg">
-                    <div class="flex flex-1 justify-between p-3">
+                <div class="md:w-1/3 flex-1 flex flex-col p-3 bg-white border-lightgrey border-1 rounded-lg justify-between">
+                    <div class="flex justify-between p-3">
                         <h3 class="text-lg font-semibold">Christmas 2024</h3>
                         <img class="text-white" src="assets/Icon3Points.svg" alt="Icon see more actions">
                     </div>
                     <div class="flex flex-col gap-3 p-3">
-                        <div class="flex gap-3">
-                            <p class="bg-lightgrey border-grey border-1 rounded-sm px-3 py-1 text-xs font-normal">Sneakers</p>
-                            <p class="bg-lightgrey border-grey border-1 rounded-sm px-3 py-1 text-xs font-normal">boots</p>
+                        <div class="flex gap-3 flex-wrap">
+                            <p class="bg-badgeLightgrey border-badgeGrey border-1 rounded-sm px-3 py-1 text-xs font-normal">Sneakers</p>
+                            <p class="bg-badgeLightgrey border-badgeGrey border-1 rounded-sm px-3 py-1 text-xs font-normal">boots</p>
                         </div>
 
                         <div>
@@ -79,18 +87,18 @@
                     </div>
                 </div>
 
-                <div class="w-1/3 h-43 p-3 border-lightgrey border-1 rounded-lg">
+                <div class="md:w-1/3 flex-1 p-3 bg-white border-lightgrey border-1 rounded-lg justify-between">
                     <div class="flex flex-1 justify-between px-3">
                         <h3 class="text-lg font-semibold">A very big title for a catalog with many thing</h3>
                         <img class="text-white" src="assets/Icon3Points.svg" alt="Icon see more actions">
                     </div>
                     <div class="flex flex-col gap-3 px-3 py-2">
-                        <div class="flex gap-3">
-                            <p class="bg-lightgrey border-grey border-1 rounded-sm px-3 py-1 text-xs font-normal">Sneakers</p>
-                            <p class="bg-lightgrey border-grey border-1 rounded-sm px-3 py-1 text-xs font-normal">boots</p>
-                            <p class="bg-lightgrey border-grey border-1 rounded-sm px-3 py-1 text-xs font-normal">Belt</p>
-                            <p class="bg-lightgrey border-grey border-1 rounded-sm px-3 py-1 text-xs font-normal">Socks</p>
-                            <p class="bg-lightgrey border-grey border-1 rounded-sm px-3 py-1 text-xs font-normal">+3</p>
+                        <div class="flex gap-3 flex-wrap">
+                            <p class="bg-badgeLightgrey border-badgeGrey border-1 rounded-sm px-3 py-1 text-xs font-normal">Sneakers</p>
+                            <p class="bg-badgeLightgrey border-badgeGrey border-1 rounded-sm px-3 py-1 text-xs font-normal">boots</p>
+                            <p class="bg-badgeLightgrey border-badgeGrey border-1 rounded-sm px-3 py-1 text-xs font-normal">Belt</p>
+                            <p class="bg-badgeLightgrey border-badgeGrey border-1 rounded-sm px-3 py-1 text-xs font-normal">Socks</p>
+                            <p class="bg-badgeLightgrey border-badgeGrey border-1 rounded-sm px-3 py-1 text-xs font-normal">+3</p>
                         </div>
 
                         <div>
