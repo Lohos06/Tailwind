@@ -10,6 +10,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
+    <!--Variables de couleur et police utilisées-->
     <style type="text/tailwindcss">
       @theme {
         --color-primary: #463ADD;
@@ -37,12 +38,14 @@
     <header></header>
     <main class="flex flex-col md:flex-row w-full h-full">
 
+        <!--section de gauche avec Tailwind en gros-->
         <section class="w-full md:w-xs md:h-full bg-secondary flex flex-col items-center">
 
             <p class="font-black text-4xl bg-gradient-to-tr from-primary to-pink bg-clip-text text-transparent p-5 animate-bounce">Tailwind</p> 
 
         </section>
-            
+        
+        <!--section principale-->
         <section class="w-full h-full flex-1 bg-background flex-col items-center">
 
             <!-- barre de recherche -->
@@ -56,6 +59,7 @@
 
             </div>
 
+            <!-- blocs de catalogs-->
             <div class="w-full h-max flex flex-col md:flex-row gap-2 px-4 py-5">
                 <div class="md:w-1/3 flex-1 p-3 bg-white border-lightgrey border-1 rounded-lg flex flex-col gap-3 justify-between">
                     <div class="flex flex-col gap-3">
